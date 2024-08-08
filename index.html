@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Voce decide o futuro da IA</title>
+    <title>Quiz de IA</title>
+    <style>
+        .caixa-principal, .caixa-resultado {
+            display: none;
+        }
+        .caixa-principal.active, .caixa-resultado.active {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <div class="caixa-principal">
-        <h1>Voce decide o futuro da IA</h1>
-        <div class="caixa-perguntas"></div>
+    <div class="caixa-principal active">
+        <div class="perguntas"></div>
         <div class="caixa-alternativas"></div>
-        <div class="caixa-resultado">
-            <p class="texto-resultado"></p>
-        </div>
+        <button id="btn-anterior" onclick="navegar(-1)">Anterior</button>
+        <button id="btn-proximo" onclick="navegar(1)">Próximo</button>
+    </div>
+    <div class="caixa-resultado">
+        <div class="texto-resultado"></div>
     </div>
     <script src="script.js"></script>
 </body>
-</html>l
+</html>
+
